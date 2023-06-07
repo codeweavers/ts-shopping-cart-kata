@@ -1,0 +1,15 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "module": "commonjs",
+        "types": [
+            "jest",
+        ]
+    },
+    "include": [
+        "**/*.spec.ts"
+    ],
+    "exclude": [
+        "e2e"
+    ]
+}

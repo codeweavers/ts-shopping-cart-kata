@@ -1,0 +1,23 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "outDir": "./out-tsc",
+        "sourceMap": true,
+        "declaration": false,
+        "moduleResolution": "node",
+        "experimentalDecorators": true,
+        "module": "ES2020",
+        "target": "ES2018",
+        "downlevelIteration": true,
+        "lib": [
+            "ES2018",
+            "DOM"
+        ]
+    },
+    "angularCompilerOptions": {
+        "strictTemplates": true
+    },
+    "exclude": [
+        "**/*.js",
+    ]
+}

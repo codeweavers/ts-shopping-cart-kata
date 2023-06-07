@@ -1,0 +1,23 @@
+# IDEs and editors
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+.vscode/*
+.history/*
+.idea/
+!/.idea
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# misc
+npm-debug.log
+yarn-error.log
+node_modules
+.jest
+.cache
+package-lock.json
