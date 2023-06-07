@@ -1,8 +1,7 @@
 # The Supermarket Checkout Kata in Typescript
 This is a variation of a popular kata described in
 http://codekata.com/kata/kata01-supermarket-pricing.
-The aim of the exercise is to build an automated checkout that can scan articles from
-a shopping cart and produce a receipt.
+The aim of the exercise is to build an automated checkout that can scan products to produce a receipt.
 
 The supermarket has a catalogue with different types of products (rice, apples, milk, toothbrushes,...).
 Each product has a price, and the total price of the shopping cart is the total of all the prices.
@@ -15,7 +14,7 @@ But the supermarket also runs special deals, for example:
 
 These are just examples: the actual special deals change each week, so need to be easily configurable.
 
-### Goal
+### The Goal
 
 The goal of the exercise is to implement a `Checkout` that can handle the following scenarios (and more - use your imagination!):
 
