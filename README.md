@@ -1,6 +1,6 @@
 # The Supermarket Checkout Kata in Typescript
 This is a variation of a popular kata described in
-http://codekata.com/kata/kata01-supermarket-pricing/.
+http://codekata.com/kata/kata01-supermarket-pricing.
 The aim of the exercise is to build an automated checkout that can scan articles from
 a shopping cart and produce a receipt.
 
