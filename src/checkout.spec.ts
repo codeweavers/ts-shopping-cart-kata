@@ -1,8 +1,8 @@
 import {Checkout} from './checkout';
-import {Receipt} from './receipt';
+import {Receipt, ReceiptItem} from './receipt';
 import {Product} from './product';
 
-function lookupReceiptItem(receipt: Receipt, id: string) {
+function lookupReceiptItem(receipt: Receipt, id: string): ReceiptItem {
     const item = receipt.items.find((x) => x.product.name === id)
     if (!item) {
         throw new Error(`The receipt does not contain a "${id}" item.`)
