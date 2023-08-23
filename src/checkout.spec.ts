@@ -1,6 +1,14 @@
-import { Checkout } from './checkout';
-import { Receipt } from './receipt';
-import { Product } from './product';
+import {Checkout} from './checkout';
+import {Receipt} from './receipt';
+import {Product} from './product';
+
+function lookupReceiptItem(receipt: Receipt, id: string) {
+    const item = receipt.items.find((x) => x.product.name === id)
+    if (!item) {
+        throw new Error(`The receipt does not contain a "${id}" item.`)
+    }
+    return item;
+}
 
 describe('Given a customer is shopping at the supermarket', () => {
 
@@ -23,7 +31,7 @@ describe('Given a customer is shopping at the supermarket', () => {
 
     });
 
-    describe('When an a single "Apple" is scanned (no promotion / offer)', () => {
+    describe('When an a single "Apple" is scanned and there is no promotion/offer', () => {
 
         let receipt: Receipt;
 
@@ -33,8 +41,16 @@ describe('Given a customer is shopping at the supermarket', () => {
             receipt = checkout.generateReceipt();
         });
 
-        it('Then the receipt should contain no scanned items', () => {
+        it('Then the receipt should contain 1 scanned item', () => {
             expect(receipt.items).toHaveLength(1);
+        });
+
+        it('Then the receipt should contain an "Apple" item', () => {
+            expect(lookupReceiptItem(receipt, 'Apple')).toBeDefined();
+        });
+
+        it('Then the receipt "Apple" item should have the correct quantity', () => {
+            expect(lookupReceiptItem(receipt, 'Apple').quantity).toEqual(1);
         });
 
         it('Then the receipt total price should be calculated correctly', () => {
